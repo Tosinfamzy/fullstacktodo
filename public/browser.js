@@ -10,6 +10,8 @@ function template(item) {
   </li> 
   `
 }
+let itemlist = items.map((item)=> {return template(item)}).join('<br>')
+document.getElementById('item-list').insertAdjacentHTML('beforeend', itemlist)
  
 document.getElementById('create-form').addEventListener('submit', (e) => {
     e.preventDefault();
